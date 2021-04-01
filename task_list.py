@@ -29,6 +29,7 @@ def uncompleted_tasks(list):
     return jobs
 print(uncompleted_tasks(tasks))
 
+
 # 2
 def completed_tasks(list):
     jobs = []
@@ -38,6 +39,7 @@ def completed_tasks(list):
     return jobs
 print(completed_tasks(tasks))
 
+
 # 3
 def all_tasks(list):
     jobs = []
@@ -45,6 +47,7 @@ def all_tasks(list):
         jobs.append(task["description"])
     return jobs
 print(all_tasks(tasks))
+
 
 # 4
 def time_taken_over_20(list):
@@ -55,12 +58,14 @@ def time_taken_over_20(list):
     return time
 print(time_taken_over_20(tasks))
 
+
 # 5
 def print_task(list, job):
     for task in tasks:
         if task["description"] == job:
             return job
 print(print_task(tasks, "Clean Windows"))
+
 
 # 6
 def update_task(list, job):
@@ -70,10 +75,8 @@ def update_task(list, job):
             return task.update(update)
 print(update_task(tasks, "Clean Windows"))
 
-# 7
-# def str2bool(x):
-#     return x.lower() in ("yes")
 
+# 7
 def add_to_list():
     new_description = input('Please enter a task you must complete ')
     bool_new_completed = False
@@ -81,7 +84,7 @@ def add_to_list():
     if new_completed == 'Yes':
         bool_new_completed = True
     new_time_taken = input('How long does it take you to do this in minutes? ')
-    new_dict_entry = {"description": new_description, "completed": new_completed, "time_taken": new_time_taken}
+    new_dict_entry = {"description": new_description, "completed": bool_new_completed, "time_taken": new_time_taken}
     tasks.append(new_dict_entry)
 
 add_to_list()
